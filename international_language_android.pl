@@ -9,10 +9,11 @@ use Spreadsheet::ParseExcel::FmtUnicode;
 
 # "CP936" can read chinese but Arabic is failed
 # //TODO
-my $oFmtC = Spreadsheet::ParseExcel::FmtUnicode->new(Unicode_Map=>"CP936"); 
+# my $oFmtC = Spreadsheet::ParseExcel::FmtUnicode->new(Unicode_Map=>"CP936"); 
 # my $oFmtC = Spreadsheet::ParseExcel::FmtUnicode->new(); 
 my $parser = Spreadsheet::ParseExcel->new();
-my $workbook = $parser->parse('strings.xls', $oFmtC);
+# my $workbook = $parser->parse('strings.xls', $oFmtC);
+my $workbook = $parser->parse('strings.xls');
 if ( !defined $workbook ) {
     die $parser->error(), ".\n";
 }
